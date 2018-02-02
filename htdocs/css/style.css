@@ -9037,7 +9037,8 @@ body {
   letter-spacing: -0.001em;
 }
 
-a {
+a,
+a:hover {
   color: #8ba1b1;
 }
 
@@ -9046,8 +9047,7 @@ a {
 ------------------------------*/
 #header {
   position: relative;
-  background: url(../img/header_bg_01.png) no-repeat center top;
-  background-size: cover;
+  background: #000000;
   color: #ffffff;
 }
 
@@ -9512,6 +9512,12 @@ main .fadeInContents > .container.fadeIn {
   max-width: 79px;
 }
 
+@media (max-width: 575.98px) {
+  #about .detail .image img, #about row01 .detail .image img {
+    max-width: 100px;
+  }
+}
+
 #about .detail ul, #about row01 .detail ul {
   margin: 0;
   padding: 0;
@@ -9655,6 +9661,13 @@ main .fadeInContents > .container.fadeIn {
   #roadmap {
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #roadmap {
+    background-image: url(../img/roadmap_bg_sp.jpg);
+    padding-bottom: 55%;
   }
 }
 
@@ -9804,7 +9817,6 @@ main .fadeInContents > .container.fadeIn {
 #community {
   padding-top: 110px;
   padding-bottom: 110px;
-  padding-bottom: 170px;
 }
 
 @media (max-width: 767.98px) {
@@ -9853,6 +9865,111 @@ main .fadeInContents > .container.fadeIn {
 
 #community .github img {
   max-width: 61px;
+}
+
+/*------------------------------
+  #airdrop
+------------------------------*/
+#airdrop {
+  padding-top: 110px;
+  padding-bottom: 110px;
+  padding-top: 0;
+}
+
+@media (max-width: 767.98px) {
+  #airdrop {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+#airdrop .container {
+  color: #6b8ba9;
+}
+
+@media (min-width: 576px) {
+  #airdrop .container {
+    padding-top: 60px;
+    padding-bottom: 80px;
+    background: #184363;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #airdrop .bg {
+    padding: 60px 15px 80px;
+    background: #184363;
+    border-radius: 10px;
+  }
+}
+
+#airdrop .bg h2 {
+  font-family: 'Sarpanch', sans-serif;
+  -webkit-transform: scaleY(0.75);
+          transform: scaleY(0.75);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 60px;
+  line-height: 1em;
+  font-weight: normal;
+  margin-bottom: 30px;
+  font-size: 40px;
+  line-height: 1.4em;
+  text-align: center;
+}
+
+@media (max-width: 575.98px) {
+  #airdrop .bg h2 {
+    font-size: 35px;
+    line-height: 1em;
+  }
+}
+
+#airdrop .bg p.p01 {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#airdrop .bg form {
+  position: relative;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+#airdrop .bg form .field {
+  width: 100%;
+  padding: 14px 118px 6px 19px;
+  background: #ffffff;
+  color: #6b8ba9;
+  border: 1px solid;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#airdrop .bg form .button {
+  font-family: 'Sarpanch', sans-serif;
+  -webkit-transform: scaleY(0.75);
+          transform: scaleY(0.75);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  letter-spacing: 0.12em;
+  position: absolute;
+  padding: 14px 20px;
+  top: 6px;
+  right: 6px;
+  background: #fecc02;
+  color: #0a2539;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1em;
 }
 
 /*------------------------------
