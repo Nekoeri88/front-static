@@ -9301,7 +9301,7 @@ a:hover {
 }
 
 #header .fv .text p.p02 {
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1em;
   font-weight: lighter;
 }
@@ -9313,7 +9313,7 @@ a:hover {
 }
 
 #header .fv .text p.p02 strong {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1em;
 }
 
@@ -9929,7 +9929,7 @@ main .fadeInContents > .container.fadeIn {
   }
 }
 
-#airdrop .bg p.p01 {
+#airdrop .bg .p01 {
   margin-bottom: 40px;
   text-align: center;
 }
@@ -9937,12 +9937,13 @@ main .fadeInContents > .container.fadeIn {
 #airdrop .bg form {
   position: relative;
   max-width: 560px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 
 #airdrop .bg form .field {
   width: 100%;
-  padding: 14px 118px 6px 19px;
+  height: 42px;
+  padding: 8px 118px 0 19px;
   background: #ffffff;
   color: #6b8ba9;
   border: 1px solid;
@@ -9961,7 +9962,9 @@ main .fadeInContents > .container.fadeIn {
           transform-origin: left top;
   letter-spacing: 0.12em;
   position: absolute;
-  padding: 14px 20px;
+  height: 40px;
+  margin: 0;
+  padding: 0 20px;
   top: 6px;
   right: 6px;
   background: #fecc02;
@@ -9969,7 +9972,13 @@ main .fadeInContents > .container.fadeIn {
   border: none;
   border-radius: 10px;
   font-size: 14px;
-  line-height: 1em;
+  line-height: 14px;
+}
+
+#airdrop .bg .p02 {
+  font-size: 12px;
+  line-height: 1.6em;
+  text-align: center;
 }
 
 /*------------------------------
