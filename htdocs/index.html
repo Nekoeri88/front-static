@@ -114,12 +114,14 @@
           <div class="row">
             <div class="col-lg-4" id="whitepaper">
               <h2>WHITEPAPER</h2>
-              <p><a href="" target="_blank"><img src="img/whitepaper_btn_01.png" alt="DOWNLOAD"></a></p>
+              <p>
+                <!--: a(href='' target='_blank')--><img src="img/whitepaper_btn_01_da.png" alt="DOWNLOAD">
+              </p>
             </div>
             <div class="col-lg-4" id="wallet">
               <h2>WALLET</h2>
               <p><a href="https://www.myetherwallet.com" target="_blank"><img src="img/wallet_btn_01.png" alt="MyEtherWallet"></a></p>
-              <p>コントラクトアドレス ： 0x751537d0e0189c24fd7e0e4dab4b83d90f926a87<br>トークンシンボル ： NANJ　桁数 ： 0</p>
+              <p>コントラクトアドレス ： 0xFFE02ee4C69eDf1b340fCaD64fbd6b37a7b9e265<br>トークンシンボル ： NANJ　桁数 ： 8</p>
             </div>
             <div class="col-lg-4" id="exchanges">
               <h2>EXCHANGES</h2>
@@ -159,12 +161,17 @@
               <div class="bg">
                 <h2>AIR DROP</h2>
                 <p class="p01">下記フォームにETHウォレットアドレスを入力してください。今なら30,000NANJプレゼント！</p>
-                <form action="/airdrop" method="post">
+                <form action="/airdrop/" method="POST">
                   <div>
                     <input class="field" type="text" name="address" placeholder="Enter your ETH wallet address">
                     <input class="button" type="submit" value="SUBMIT">
                   </div>
                 </form>
+                <div class="status">
+                  <p class="thanks">送信しました。</p>
+                  <p class="error">正しいアドレスを入力してください。<br>0xから始まる42桁です。</p>
+                  <p class="error02">送信に失敗しました。</p>
+                </div>
                 <p class="p02">※MyEtherWalletなどERC20/ERC223トークンに対応したウォレットのアドレスを記入してください<br>取引所のウォレットアドレスを記入しても受け取ることができませんのでご注意ください</p>
               </div>
             </div>

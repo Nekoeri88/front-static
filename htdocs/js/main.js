@@ -138,3 +138,38 @@ $(document).ready(function () {
     });
   }
 });
+
+//Air Drop validation
+$(document).ready(function () {
+  var formDom = $("#airdrop form");
+  var statusDom = $("#airdrop .status p");
+  var isSubmitted = false;
+  
+  formDom.on("submit", function () {
+    var isError = false;
+    var addressVal = formDom.find(".field").val();
+    
+    if(isSubmitted) return false;
+    statusDom.removeClass("show");
+    if(addressVal.match(/^0x\w{40}$/) == null) isError = true;
+    if(!isError) {
+      $.ajax({
+        type: "POST",
+        url: formDom.attr("action"),
+        data: $(this).serialize(),
+        success: function (res) {
+          isSubmitted = true;
+          formDom.find("input").prop("disabled", true);
+          statusDom.filter(".thanks").addClass("show");
+        },
+        error: function () {
+          statusDom.filter(".error02").addClass("show");
+        }
+      });
+    } else {
+      statusDom.filter(".error").addClass("show");
+    }
+    
+    return false;
+  });
+});
