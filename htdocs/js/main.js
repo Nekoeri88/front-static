@@ -144,6 +144,10 @@ $(document).ready(function () {
   var formDom = $("#airdrop form");
   var statusDom = $("#airdrop .status p");
   var isSubmitted = false;
+  var blackList = new Array(
+    "0x751537d0e0189c24fd7e0e4dab4b83d90f926a87",
+    "0xFFE02ee4C69eDf1b340fCaD64fbd6b37a7b9e265"
+  );
   
   formDom.on("submit", function () {
     var isError = false;
@@ -152,6 +156,9 @@ $(document).ready(function () {
     if(isSubmitted) return false;
     statusDom.removeClass("show");
     if(addressVal.match(/^0x\w{40}$/) == null) isError = true;
+    blackList.forEach(function (item) {
+      if(addressVal == item) isError = true;
+    });
     if(!isError) {
       $.ajax({
         type: "POST",
